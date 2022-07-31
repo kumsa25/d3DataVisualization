@@ -165,14 +165,14 @@ async function init() {
             .duration(200)
             .style("opacity", 0.9)
             .style("transform", "scale(1.2)")
-            .style("top", event.pageY - 180 + "px")
-            .style("left", event.pageX - 10 + "px");
+            .style("top", event.pageY - 310 + "px")
+            .style("left", event.pageX -20 + "px");
           tooltip.innerHTML ="Country: "+selectedCountry+"<br />Year: " + i[0] + "<br/> GDP: " + Math.round(Number(i[1]));
         })
-        .on("mouseout", function (d) {
+        .on("mouseout", function (d, i) {
           div
             .transition()
-            .duration(1000)
+            .duration(200)
             .style("opacity", 0)
             .style("transform", "scale(0.8)");
         });
@@ -234,7 +234,7 @@ async function init() {
     //annotation
    
     notes.innerHTML = "*The data is from the <a class='' href='https://www.worldbank.org/'>World Bank</a>";
-    notes.innerHTML = "<b>GDP per Capita:</b>We can notice a sudden dip in the GDP of Countries in 2008-2009 due to <i>Great Recession<i/> and in 2020 due to <i>COVID-19</i>."
+    notes.innerHTML = "<b>GDP per Capita:</b> Notice a sudden dip in the GDP of Countries in 2008-2009 due to <i>Great Recession<i/> and another dip in 2020 due to the <i>COVID-19 Pandemic</i>."
     notes.style.fontSize = "18px";
 
   });

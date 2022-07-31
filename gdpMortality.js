@@ -159,8 +159,8 @@ async function init() {
             .duration(200)
             .style("opacity", 0.9)
             .style("transform", "scale(1.2)")
-            .style("top", event.pageY - 180 + "px")
-            .style("left", event.pageX - 10 + "px");
+            .style("top", event.pageY - 310 + "px")
+            .style("left", event.pageX -20 + "px");
           tooltip.innerHTML =
             i[1] +
             "<br/> GDP = $" +
@@ -240,13 +240,12 @@ async function init() {
 
         const mortalityButton = d3.select("#mortalityButton");
         mortalityButton.on("click", function () {
-          window.location.href = "./mortality.html";
-          window.location.hash = "#India";
+          window.location.href = "./mortality.html#"+"India";
+
         })
         const gdpButton = d3.select("#gdpButton");
         gdpButton.on("click", function () {
-          window.location.href = "./index.html";
-          window.location.hash = "#India";
+          window.location.href = "./index.html#" + "India";
         })
 
 }
