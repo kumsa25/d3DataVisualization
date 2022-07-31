@@ -25,7 +25,7 @@ async function init() {
       }
     }
     countryData = Array.from(S);
-    var yearList = [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011,2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021];
+    var yearList = [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011,2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020];
 
     //find min and max GDP and mortality
     let GDP_Max = 0;
@@ -209,8 +209,8 @@ async function init() {
         .text("GDP");
     }
     
-    const page = d3.select("#my_dataviz");
-    page.append("h1").attr("id","errorLabel").attr("class","error").text("Data not available for this year").style("display","none");
+    // const page = d3.select("#my_dataviz");
+    // page.append("h1").attr("id","errorLabel").attr("class","error").text("Data not available for this year").style("display","none");
 
 
     d3.select("#dropDown").on("change", function () {
@@ -220,17 +220,17 @@ async function init() {
         selectedText = d3.select("#dropDown option:checked").text();
         d3.selectAll("circle").style("fill", "#69b3a2");
         d3.selectAll("circle").style("opacity", 0.3);
-        
-        if(selectedText>2017){
-            d3.select("svg").style("display", "none")
-            // page.append("div").attr("class", "error").text("Data not available for this year");
-            d3.select("#errorLabel").style("display", "block");
-        }
-        else{
-            changeValues(selectedText, DataArray);
-            d3.select("svg").style("display", "block")
-            d3.select("#errorLabel").style("display", "none")
-        }
+                    changeValues(selectedText, DataArray);
+
+        // if(selectedText>2017){
+        //     d3.select("svg").style("display", "none")
+        //     // page.append("div").attr("class", "error").text("Data not available for this year");
+        //     d3.select("#errorLabel").style("display", "block");
+        // }
+        // else{
+        //     d3.select("svg").style("display", "block")
+        //     d3.select("#errorLabel").style("display", "none")
+        // }
       });
 
       const notes2 = document.getElementById("notes2");

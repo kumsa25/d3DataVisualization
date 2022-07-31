@@ -129,8 +129,8 @@ async function init() {
         });
     });
 
-    var x = d3.scaleLinear().domain([2001, 2016]).range([0, width]);
-    var y = d3.scaleLinear().domain([Mortality_Min, 3000]).range([height, 0]);
+    var x = d3.scaleLinear().domain([2001, 2020]).range([0, width]);
+    var y = d3.scaleLinear().domain([Mortality_Min, 200]).range([height, 0]);
     svg
       .append("g")
       .attr("transform", "translate(0," + height + ")")
@@ -252,7 +252,7 @@ async function init() {
 
       var notes = document.getElementById("notes1");
       notes.innerHTML = "*The data is from the <a class='' href='https://www.worldbank.org/'>World Bank</a>";
-      notes.innerHTML = "<b>Mortality Rate:</b> We notice that the mortality values of the countries decreases along the years, showing that as a country progresses, it's mortality rate decreases."
+      notes.innerHTML = "<b>Mortality Rate:</b> Notice a sudden dip in the Mortality rate for "+hashCountry+" in 2020 due to <i>COVID-19</i>."
       notes.style.fontSize = "18px";
     
    
