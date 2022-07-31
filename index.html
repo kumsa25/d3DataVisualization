@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="index.css"></link>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Correlation between GDP and Mortality
+        </title>
+        <script src="https://d3js.org/d3.v6.js" defer></script>
+    <script defer src="gdp.js"></script>
+    <script>
+      margin = {top: 10, right: 30, bottom: 30, left: 120},
+    width = 1100 - margin.left - margin.right,
+    height = 450 - margin.top - margin.bottom;
+    </script>
+    </head>
+    <body class="Correlation" onload="init()">
+        <nav>
+            <ul>
+                <li>
+                    <button id="gdpButton">GDP</button>
+                </li>
+                <li>
+                    <button id="mortalityButton">Mortality</button>
+                </li>
+                <li>
+                    <a href="GDP_Mortality.html" ><button>Correlation between GDP and Mortality</button></a>
+                </li>
+    
+            </ul>
+        </nav>
+        <h1>GDP Data of different countries</h1>
+<div class="DropDownDiv">
+    <label style="margin: 0" for="dropDown">Select a Country: </label>
+    <select style="margin: 0" name="dropDown" id="dropDown"></select>
+
+</div>
+        <div id="my_dataviz"></div>
+        <div id="notes"></div>
+    </body>
+</html>
