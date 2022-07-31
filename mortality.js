@@ -73,13 +73,13 @@ async function init() {
 
     var selected = d3.select("#dropDown").node().value;
     selectedText = d3.select("#dropDown option:checked").text();
-    
+
     const gdpButton = d3.select("#gdpButton");
     gdpButton.on("click", function () {
       window.location.href = "./index.html#" + selectedText;
       console.log(selectedText, window.location.hash);
     });
-    
+
     var selectedCountryList = [];
     arrayData = [];
     console.log(hashCountry);
@@ -138,7 +138,7 @@ async function init() {
     svg.append("g").call(d3.axisLeft(y));
 
     changeValues(hashCountry);
-    
+
     d3.select("svg").append("annotationBox").attr("class", "annotationBox")
 
     function changeValues(selectedCountry) {
@@ -252,9 +252,9 @@ async function init() {
 
       var notes = document.getElementById("notes1");
       notes.innerHTML = "*The data is from the <a class='' href='https://www.worldbank.org/'>World Bank</a>";
-      notes.innerHTML = "<b>Mortality Rate:</b> Notice a sudden spike in the Mortality rate for the countries in 2020 due to <i>COVID-19</i>."
+      notes.innerHTML = "<b>Mortality Rate:</b> Notice overall mortality levels of the countries  decreasing drastically in the last decade."
       notes.style.fontSize = "18px";
-    
-   
+
+
   });
 }
