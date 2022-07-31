@@ -234,7 +234,7 @@ async function init() {
     //annotation
    
     notes.innerHTML = "*The data is from the <a class='' href='https://www.worldbank.org/'>World Bank</a>";
-    notes.innerHTML = "<b>GDP per Capita:</b> Notice a sudden dip in the GDP of "+hashCountry+" in 2008-2009 due to <i>Great Recession<i/> and another dip in 2020 due to the <i>COVID-19 Pandemic</i>."
+    notes.innerHTML = "<b>GDP per Capita:</b>We can notice a sudden dip in the GDP of Countries in 2008-2009 due to <i>Great Recession<i/> and in 2020 due to <i>COVID-19</i>."
     notes.style.fontSize = "18px";
 
   });
