@@ -252,7 +252,7 @@ async function init() {
 
       var notes = document.getElementById("notes1");
       notes.innerHTML = "*The data is from the <a class='' href='https://www.worldbank.org/'>World Bank</a>";
-      notes.innerHTML = "<b>Mortality Rate:</b> Notice a sudden dip in the Mortality rate for the countries in 2020 due to <i>COVID-19</i>."
+      notes.innerHTML = "<b>Mortality Rate:</b> We notice that the mortality values of the countries decreases along the years, showing that as a country progresses, it's mortality rate decreases."
       notes.style.fontSize = "18px";
     
    
